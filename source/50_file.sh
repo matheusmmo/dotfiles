@@ -40,3 +40,6 @@ function md() {
   mkdir -p "$@" && cd "$@"
 }
 
+# Easy to copy return of command using pipe.
+# Eg: cat test.txt | copy
+alias copy="xclip -sel clip"

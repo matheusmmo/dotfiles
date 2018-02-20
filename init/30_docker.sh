@@ -8,6 +8,6 @@ sudo dnf config-manager \
 sudo dnf install -y docker-ce
 
 sudo groupadd docker
-sudo usermod -aG docker $USER
+sudo usermod -aG docker matheusmmo
 sudo systemctl start docker
 sudo systemctl enable docker
