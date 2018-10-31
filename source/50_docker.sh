@@ -26,7 +26,7 @@ if [ "$1" != "" ]
 function k8sl() {
   if [ "$1" != "" ]
   then
-      pod=`kubectl get pod | grep $1 | awk '{ print $1 }'`;
+      pod=`kubectl get pod | grep $1 | head -n 1 | awk '{ print $1 }'`;
       container=`kubectl get pods $pod -o jsonpath='{.spec.containers[*].name}' | head -n 1 | tr ' ' '\n' | grep $1`;
       kubectl logs -f $pod $container;
   fi
