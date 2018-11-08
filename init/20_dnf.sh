@@ -22,6 +22,7 @@ packages=(
   xclip
   htop
   gnome-tweak-tool
+  compat-ffmpeg28
 )
 
 if (( ${#packages[@]} > 0 )); then
